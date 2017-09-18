@@ -1,6 +1,6 @@
 {
   "name": "egg-healthcheck",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "health check for egg",
   "eggPlugin": {
     "name": "healthcheck"
@@ -37,7 +37,7 @@
   },
   "files": [
     "app.js",
-    "agent.js",
+    "app",
     "config"
   ],
   "ci": {
