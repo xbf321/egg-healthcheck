@@ -1,6 +1,11 @@
 'use strict';
 
-exports.healthcheck = {
-    file: 'path',
-    route: '/healthcheck.htm',
+const path = require('path');
+module.exports = appInfo => {
+    return {
+        healthcheck: {
+            file: path.join(appInfo.baseDir, 'healthcheck.html'),
+            route: '/healthcheck.html'
+        }
+    };
 };

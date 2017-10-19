@@ -2,6 +2,8 @@
 
 nginx 心跳检测文件，根据此文件判断是否可以对外提供服务。
 
+请求URL /healthcheck.html ，返回项目根路径下 /healthcheck.html 物理文件。
+
 ## Install
 
 ```bash
@@ -18,15 +20,16 @@ exports.healthcheck = {
 };
 ```
 
-## Configuration
+## Configuration（可选）
 
+如果想自定义路径或者请求URL的话，请按以下配置。
 ```js
 // {app_root}/config/config.default.js
 exports.healthcheck = {
-    // healthcheck 物理文件路径
-    file: path.join(appInfo.baseDir, 'healthcheck.htm'),
-    // 匹配的路由，默认 /healthcheck.htm
-    route: '/healthcheck.htm',
+    // healthcheck 物理文件路径，默认根路径下 /healthcheck.html
+    file: path.join(appInfo.baseDir, 'healthcheck.html'),
+    // 匹配的路由，默认 /healthcheck.html
+    route: '/healthcheck.html',
 };
 ```
 
